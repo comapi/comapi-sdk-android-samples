@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ui.ConversationListActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_conversations"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:title="@string/conversations_title"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"/>
+
+    <ListView
+        android:id="@+id/list_view_conversations"
+        android:layout_below="@id/toolbar_conversations"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transcriptMode="alwaysScroll"
+        android:divider="@android:color/black"
+        android:dividerHeight="1dp"
+        android:stackFromBottom="false">
+    </ListView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/create_conversation_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:src="@drawable/create"
+        app:backgroundTint="@color/colorPrimary"
+        app:rippleColor="@color/colorPrimary"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+
+    <include
+        android:id="@+id/overlay"
+        layout="@layout/wait_overlay"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
