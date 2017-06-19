@@ -3,9 +3,9 @@ This is a minimal sample app using just the Comapi Foundation SDK to provide mes
 
 ## Prerequisites
 
-Signup for Comapi account [here](http://www.comapi.com)
-Follow quickstart guide [here](http://docs.comapi.com/docs/quick-start) and create an api space
-Setup [authentication](http://docs.comapi.com/docs/channel-setup-app-messaging) for your apiSpace with the following values
+- Signup for Comapi account [here](http://www.comapi.com).
+- Follow quickstart guide [here](http://docs.comapi.com/docs/quick-start) and create an api space.
+- Setup [authentication](http://docs.comapi.com/docs/channel-setup-app-messaging) for your apiSpace with the following values.
 
 | Name | Value |
 | -----------| ----- |
@@ -16,7 +16,7 @@ Setup [authentication](http://docs.comapi.com/docs/channel-setup-app-messaging) 
 
 These same will be used in [AuthChallengeHandler.java](./src/main/java/com/comapi/sample/comapi/AuthChallengeHandler.java) to create a [JWT](https://jwt.io/introduction/) locally.
 
-Provide a value of `apiSpaceId` variable in [SampleApplication.class](./src/main/java/com/comapi/sample/SampleApplication.java).
+- Provide a value of `apiSpaceId` variable in [SampleApplication.class](./src/main/java/com/comapi/sample/SampleApplication.java).
 ```java
 private void initComapi() {
         ...
