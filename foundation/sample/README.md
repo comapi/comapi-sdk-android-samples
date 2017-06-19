@@ -14,9 +14,9 @@ This is a minimal sample app using just the Comapi Foundation SDK to provide mes
 | `Shared Secret` |  `secret`| 
 | `ID Claim` |  `sub`| 
 
-These same will be used in [AuthChallengeHandler.java](./chat_sample/src/main/java/com/comapi/sample/comapi/AuthChallengeHandler.java) to create a [JWT](https://jwt.io/introduction/) locally.
+These same will be used in [AuthChallengeHandler.java](https://github.com/comapi/comapi-sdk-android-samples/blob/master/foundation/sample/chat_sample/src/main/java/com/comapi/sample/comapi/AuthChallengeHandler.java) to create a [JWT](https://jwt.io/introduction/) locally.
 
-- Provide a value of `apiSpaceId` variable in [SampleApplication.class](./chat_sample/src/main/java/com/comapi/sample/SampleApplication.java).
+- Provide a value of `apiSpaceId` variable in [SampleApplication.class](https://github.com/comapi/comapi-sdk-android-samples/blob/master/foundation/sample/chat_sample/src/main/java/com/comapi/sample/SampleApplication.java).
 ```java
 private void initComapi() {
         ...
