@@ -13,4 +13,4 @@ private void initComapi() {
 ```
 You can obtain this ID from API Space configuration. For the details please read Comapi [documentation](http://docs.comapi.com/docs/getting-started).
 
-To avoid error log while initialising SDK (it doesn't affect sample app functionality in it's current form) you will need to replace mocked [google-services.json](https://support.google.com/firebase/answer/7015592?hl=en) file in `foundation/sample/chat_sample` folder.
+To avoid error log while initialising SDK (it doesn't affect sample app functionality in its current form) you will need to replace mocked [google-services.json](https://support.google.com/firebase/answer/7015592?hl=en) file in `foundation/sample/chat_sample` folder.
