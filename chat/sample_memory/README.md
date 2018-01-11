@@ -26,8 +26,6 @@ private void initComapi() {
 }
 ```
 
-To avoid error log while initialising SDK (it doesn't affect sample app functionality in its current form) you will need to replace mocked [google-services.json](https://support.google.com/firebase/answer/7015592?hl=en) file in `foundation/sample/chat_sample` folder.
-
 ## Key Features:
 
 ### Login dialog / Logout button on Conversation list Activity
