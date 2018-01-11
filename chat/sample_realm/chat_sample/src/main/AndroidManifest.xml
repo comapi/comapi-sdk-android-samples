@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.comapi.sample">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".SampleApplication"
+        tools:replace="android:allowBackup"
+        android:allowBackup="false"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--<meta-data-->
+            <!--android:name="com.google.firebase.messaging.default_notification_channel_id"-->
+            <!--android:value="@string/default_notification_channel_id"/>-->
+
+        <activity
+            android:name=".ui.ConversationListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.MessageListActivity"
+            android:label="@string/title_message_list"
+            android:parentActivityName=".ui.ConversationListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.comapi.sample.ui.ConversationListActivity" />
+        </activity>
+
+        <activity
+            android:name=".ui.ManageParticipantsActivity"
+            android:label="@string/title_manage_participants"
+            android:parentActivityName=".ui.MessageListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.comapi.sample.ui.MessageListActivity" />
+        </activity>
+
+    </application>
+</manifest>
