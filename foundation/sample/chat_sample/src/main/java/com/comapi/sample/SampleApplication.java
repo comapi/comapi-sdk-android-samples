@@ -35,7 +35,6 @@ import com.comapi.sample.comapi.ComapiController;
 import com.comapi.sample.comapi.EventsHandler;
 import com.comapi.sample.comapi.PushHandler;
 import com.comapi.sample.events.Initialisation;
-import com.google.firebase.FirebaseApp;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -52,8 +51,8 @@ public class SampleApplication extends Application implements Callback<ComapiCli
     public void onCreate() {
         super.onCreate();
 
-        //Initialise Firebase
-        FirebaseApp.initializeApp(this);
+        //Initialise Firebase (you will need this if using foundation push functionality)
+        //FirebaseApp.initializeApp(this);
 
         // Initialise Comapi
         initComapi();
@@ -85,6 +84,7 @@ public class SampleApplication extends Application implements Callback<ComapiCli
                         .pushMessageListener(new PushHandler())
                         // Sets receiver of messaging live events
                         .messagingListener(new EventsHandler(comapiController))
+                        .fcmEnabled(false) //Exclude foundation push functionality
                 // Sets callback to retrieve Comapi client instance
                 , this);
     }
