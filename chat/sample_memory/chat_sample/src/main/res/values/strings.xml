@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Comapi Sample</string>
+    <string name="title_message_list">Chat</string>
+    <string name="title_manage_participants">Manage participants</string>
+    <string name="conversations_title">Conversations</string>
+    <string name="done">done</string>
+    <string name="conversation_name">Conversation name:</string>
+    <string name="add">Add</string>
+    <string name="participant_profile_id">Participant profile id</string>
+    <string name="add_participants">Add other participants to this conversation:</string>
+    <string name="send">Send</string>
+    <string name="type_message_hint">Type new message here …</string>
+    <string name="create_conversation">Create conversation</string>
+    <string name="name">name</string>
+    <string name="cancel">cancel</string>
+    <string name="create">create</string>
+    <string name="no_participants">No participants</string>
+    <string name="start">start</string>
+    <string name="profile_id">profile id</string>
+    <string name="login_as">Login as</string>
+    <string name="logged_in_as">Logged in as</string>
+    <string name="no_messages">"No messages"</string>
+</resources>
