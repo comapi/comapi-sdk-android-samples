@@ -20,7 +20,7 @@
 
 package com.comapi.sample;
 
-import android.app.Application;
+import android.support.multidex.MultiDexApplication;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -35,6 +35,7 @@ import com.comapi.sample.comapi.ComapiController;
 import com.comapi.sample.comapi.EventsHandler;
 import com.comapi.sample.comapi.PushHandler;
 import com.comapi.sample.events.Initialisation;
+import com.google.firebase.FirebaseApp;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -43,7 +44,7 @@ import org.greenrobot.eventbus.EventBus;
  *
  * @author Marcin Swierczek
  */
-public class SampleApplication extends Application implements Callback<ComapiClient> {
+public class SampleApplication extends MultiDexApplication implements Callback<ComapiClient> {
 
     private ComapiController comapiController;
 
@@ -52,7 +53,7 @@ public class SampleApplication extends Application implements Callback<ComapiCli
         super.onCreate();
 
         //Initialise Firebase (you will need this if using foundation push functionality)
-        //FirebaseApp.initializeApp(this);
+        FirebaseApp.initializeApp(this);
 
         // Initialise Comapi
         initComapi();
@@ -64,7 +65,7 @@ public class SampleApplication extends Application implements Callback<ComapiCli
         comapiController = new ComapiController();
 
         // PUT YOUR API KEY HERE
-        final String apiSpaceId = "";
+        final String apiSpaceId = "PUT_YOUR_API_SPACE_ID_HERE";
 
         if (TextUtils.isEmpty(apiSpaceId)) {
             Log.e(Const.TAG, "Put your Api Space Id in SampleApplication#initComapi()");
@@ -84,7 +85,7 @@ public class SampleApplication extends Application implements Callback<ComapiCli
                         .pushMessageListener(new PushHandler())
                         // Sets receiver of messaging live events
                         .messagingListener(new EventsHandler(comapiController))
-                        .fcmEnabled(false) //Exclude foundation push functionality
+                        //.fcmEnabled(false) //Exclude foundation push functionality
                 // Sets callback to retrieve Comapi client instance
                 , this);
     }
